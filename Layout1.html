@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+
+        body{
+            width: 960px;
+            margin: 20px auto 20px auto;
+            display: grid;
+            grid-template-columns: repeat(4,fr);
+            grid-template-rows: 80px 300px 150px 1fr;
+            grid-gap:15px;
+        }
+        .logo,.navigation,.img,.product1,.product2,footer{
+            background-color: silver;}
+        header{
+            grid-row: 1/2;
+            grid-column: 1/5;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 15px; }
+        .logo{
+              grid-column: 1/2;
+        }
+        .navigation{
+            grid-column: 3/5;
+            grid-row: 1/2;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            height: 45px;
+            align-self: center; 
+
+        }
+        .navigation span{
+             align-self: center;
+             justify-self: center;
+        }
+       
+        .img{
+            grid-column: 1/5;
+            grid-row: 2/3;
+            }
+
+        .products{
+            grid-row: 1/2;
+            grid-column: 1/5;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 15px; }
+
+            .products{
+                grid-column: 1/5;
+                grid-row: 3/4;
+            }
+
+        footer{
+            grid-column: 1/5;
+            grid-row: 4/5;
+            display: grid;
+            align-self: center; 
+            justify-content: center;
+
+        }
+
+    </style>
+</head>
+<body>
+   <header>
+        <div class="logo">Company Logo</div>
+        <div class="navigation">
+            <span>Item1</span>
+            <span>Item2</span>
+            <span>Item3</span>
+            <span>Item4</span>
+         </div>
+    </header>
+    
+    <section class="img">Featured Image Product</section>
+    <section class="products">
+        <div class="product1">Product1</div>
+        <div class="product2">Product2</div>
+        </section>
+    <footer>
+       <p>Copyright Notice </p>  
+    </footer>
+</body>
+</html>
